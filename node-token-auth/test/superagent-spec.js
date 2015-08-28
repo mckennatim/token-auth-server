@@ -14,10 +14,10 @@ describe('superagent:', function() {
 	var name = 'tim7';
 	var ucnt = 0;
 	var apikey = 'dog';
-	var ureg = 'tim';
+	var ureg = 'tim2';
 	var uav = 'fred';
 	var token ='';
-	var eregtim = 'mckenna.tim@gmail.com';
+	var eregtim = 'tim2@sitebuilt.net';
 	var enottim = 'mckenna.nottim@gmail.com';
 	it('GET / should be running and return: please select...', function(done) {
 			superagent.get(httpLoc)
@@ -103,9 +103,9 @@ describe('superagent:', function() {
 				})
 			}
 		)
-		it('POSTs fails for tim2 with tim apikey', function(done) {
+		it('POSTs fails for tim with tim2 apikey', function(done) {
 			agent
-				.post(httpLoc + 'authenticate/tim2')
+				.post(httpLoc + 'authenticate/tim')
 				.send({
 					apikey: apikey
 				})
@@ -129,7 +129,7 @@ describe('superagent:', function() {
 					done()
 				})
 		})
-		it('DELETES user tim', function(done){
+		it('DELETES user tim2', function(done){
 			agent
 				.del(httpLoc + 'users/'+ureg)
 				.set('Authorization', 'Bearer ' + token)
