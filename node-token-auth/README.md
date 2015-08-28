@@ -15,6 +15,6 @@ start mongod
 from /server run
 	node server
 
-test 
+test - from new console:
       cd node-token-auth
       mocha
