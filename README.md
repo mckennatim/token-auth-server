@@ -1,6 +1,10 @@
 #token-auth-server
 
-Uses node express passport and mongoose.
+Token authorization via APIkey. User registers with name and email and gets an apikey sent to their email address. Entering that apikey with your username returns a token which would is stored stored in the browser's localStorage. Protected areas on the server require an token to be sent with each request.
+
+Allows Cross-Origin-Resource-Sharing (CORS). MongoDb stores records for each user containing (at least) name, email and apikey.
+
+Uses node, express, passport and mongoose.
 
 ##config
 
