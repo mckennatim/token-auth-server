@@ -8,8 +8,8 @@ var app = express();
 //app.engine('.html', require('ejs').renderFile);
 // view engine setup
 app.set('views', __dirname + '/views/');
-var ejs = require('ejs')
-app.set('view engine', 'ejs');
+//var ejs = require('ejs')
+//app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -51,7 +51,5 @@ if (app.get('env') === 'development') {
         });
     });
 }
-
-
 
 module.exports = app;

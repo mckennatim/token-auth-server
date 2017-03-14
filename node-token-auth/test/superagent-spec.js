@@ -1,5 +1,6 @@
 var superagent = require('superagent')
 var expect = require('expect.js')
+
 var should = require('should')
 var _ = require('underscore')
 var jwt = require('jwt-simple');
@@ -32,7 +33,7 @@ describe('superagent:', function() {
 		/*-----------------------------------authentication-----------------------------------------------*/
 	describe('signup', function() {
 		//before(loginUser(agent));    
-		it('gets a [available] for user tim ', function(done) {
+		it('gets a [available] for user tim2 ', function(done) {
 			agent
 				.get(httpLoc + 'isUser/' + ureg)
 				.end(function(e, res) {
@@ -41,7 +42,7 @@ describe('superagent:', function() {
 					done()
 				})
 		})
-		it('gets a [available] for user tim and email and creates user', function(done) {
+		it('gets a [available] for user tim2 and email and creates user', function(done) {
 			agent
 				.get(httpLoc + 'isMatch/?name=' + ureg + '&email=' + eregtim)
 				.end(function(e, res) {
@@ -136,10 +137,9 @@ describe('superagent:', function() {
 				.end(function(e, res) {
 					console.log(res.body)
 					expect(e).to.eql(null)
-					expect(res.body).to.eql(1)
+					expect(res.body.name).to.eql("tim2")
 					done()
 				})			
 		})
 	})
 })
-

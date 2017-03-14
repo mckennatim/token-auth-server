@@ -9,8 +9,8 @@ var secret = require('../cfg').cfg().secret
 /*-----------------------------setup mailer-----------------------------------*/
 var nodemailer = require('nodemailer')
 var gmailCred =require('../cfg').gmail();
-var smtpTransport = nodemailer.createTransport("SMTP",gmailCred);  
-console.log(smtpTransport.options.service)
+var smtpTransport = nodemailer.createTransport(gmailCred);  
+//console.log(smtpTransport.options)
 
 var blankUser= {name: '', email: '', lists:[], role:'', timestamp: 1, apikey: ''};
 
